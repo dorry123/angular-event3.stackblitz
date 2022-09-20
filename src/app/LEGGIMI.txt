@@ -1,0 +1,133 @@
+Lanciare con 'ionic serve'
+    Optional: 'ionic serve --lab'  //lancio con opzione Android o IOS
+Lanciare ilo DB MySQL e connettersi con root root nella parte administrator
+Lanciare REST con IntellyJ
+
+Testare con Postman
+
+//Eventi
+http://localhost:8080/evento/all
+http://localhost:8080/evento/2
+http://localhost:8080/evento/add
+{
+    "id": 2,
+    "utente": {
+        "id": 1
+    },
+    "dataInizio": "2025-01-03",
+    "dataFine": "2025-03-03",
+    "localita": "Roma centro1",
+    "indirizzo": "Via Tizio1213",
+    "cap": "00122",
+    "costo": 13.1,
+    "sconto": 5.5,
+    "tipologiaEvento": {
+        "id": 1
+    },
+    "eventoSpeciale": 0,
+    "descrizione": "mia descrizione in causa2",
+    "nome": "Evento Concerto in Piazza Navona3"
+}
+
+http://localhost:8080/evento/update/2
+    {
+        "id_utente": 2,
+        "tipoEvento": 1,
+        "nome": "Evento Concerto in Piazza Navona4",
+        "dataInizio": "2025-01-03",
+        "dataFine": "2025-03-03",
+        "localita": "Roma centro12",
+        "indirizzo": "Via Tizio1212",
+        "cap": "00123",
+        "costo": 10.10,
+        "sconto": 2.50,
+        "eventoSpeciale": 0,
+        "descrizione": "mia descrizione in causa234"
+    }
+
+
+    http://localhost:8080/evento/delete/3
+
+    News
+    localhost:8080/news/all
+    localhost:8080/news/18
+    http://localhost:8080/news/user/2
+    localhost:8080/news/update/1
+        {
+        "nome_msg": "msg mio23456",
+        "attivo": 1,
+        "data_ora": "2026-10-25",
+        "tipo_news": 1,
+        "messaggio": "messaggio23456",
+        "id_Utente": 2,
+        "id_Evento": 2,
+        "tipoNews": 1,
+        "id_news": 1
+    }
+
+    localhost:8080/news/addnews
+    localhost:8080/news/delete/1
+---------------
+
+    Note = Recensioni
+    localhost:8080/note/all
+    localhost:8080/note/1
+    localhost:8080/note/update/2
+    localhost:8080/note/addnota
+    {
+    "id_user": "1",
+    "id_evento": "2",
+    "title": "nota rossa adadsxxxx12333",
+    "rate": 4,
+    "descrizione": "mia nota44445xxxx122333"
+}
+    localhost:8080/note/delete/4
+
+user
+localhost:8080/user/all
+localhost:8080/user/idUser
+localhost:8080/user/saveUser
+
+    {
+        "tipoutente": "utente",
+        "societa": "mia soc518",
+        "piva": "22423424555888",
+        "nome": "Dorry88",
+        "cognome": "dorry488",
+        "email": "dorry4@yahoo.it",
+        "telefono": "8888",
+        "indirizzo": "Via Espero88",
+        "provincia": "RM",
+        "cap": "00500",
+        "localita": "Roma",
+        "username": "roma3",
+        "password": "roma3"
+    }
+
+    localhost:8080/user/update/id
+    localhost:8080/user/delete/id
+
+    localhost:8080/user/loginUser/request
+        {
+        "tipoutente": "utente",
+        "societa": "mia soc518",
+        "piva": "22423424555888",
+        "nome": "Dorry88",
+        "cognome": "dorry488",
+        "email": "dorry4@yahoo.it",
+        "telefono": "8888",
+        "indirizzo": "Via Espero88",
+        "provincia": "RM",
+        "cap": "00500",
+        "localita": "Roma",
+        "username": "roma3",
+        "password": "roma3"
+    }
+
+    Prendere il token 
+    eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI1ODc5Iiwic3ViIjoicm9tYTMiLCJpc3MiOiJBQkNfTHRkIiwiYXVkIjoiWFlaX0x0ZCIsImlhdCI6MTYyMzM0NjY1NCwiZXhwIjoxNjIzMzUwMjU0fQ.RQ_Qkm3hL2K9NZEpVoF1Qgl8bLGFRIoAHjcP9ixZB05tcXQADSH02OmCSbjL4hNAatiEZz3gYe-OYn3YSP2jVg
+    //mettere token su Headers-> su Key = Authorization, value = token
+    localhost:8080/user/getData
+
+
+    https://documenter.getpostman.com/view/9807106/TVmV7aFs

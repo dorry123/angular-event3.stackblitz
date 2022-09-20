@@ -1,0 +1,36 @@
+Funzionalistà app (minimo di base)
+-------------
+Eventi
+- lista eventi () - ok prov
+- dettaglio evento
+- aggiungi ai preferiti - optional
+- ricerca eventi (data, categoria) - optional
+
+- Categoria in apertuta (caricamento in splash)
+
+- Menu logatto e non loggato
+
+- Recensione per utente e per evento (lista)
+- aggiungi Recensione
+
+- News (lista) - ok prov
+
+- Carrello spesa (in sessione)
+
+- Ticket ( lista )
+- dettaglio ticket
+- download tkt (optional)
+
+Profilo utente
+- modifica password
+- preferiti (in sessione)
+- logout
+- update immagine (optional)
+
+
+Registrazione utente nuovo
+Login all'app
+
+Pagamento con CC, bancomat (aquisto)
+
+Mappa evento con tutti gli stand mostrati
