@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-title>Dettaglio ordini - ticket</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<ion-content padding>
+  <ion-card *ngIf="(ordini$ | async) as ord">
+    <ion-card-header>
+      <ion-card-title>ID {{ord.id}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+                <h2>Id ordine: {{ord.id}}</h2>
+                 <p>Id evento: {{ord.id_evento}}</p>
+                <p>Qta: {{ord.qta}}</p>
+                <p>Id utente: {{ord.id_utente}}</p>
+                <p>CodBonus: {{ord.codBonus}}</p>
+                <p>ScontoBonus: {{ord.scontoBonus}}</p>
+                <p>Totale Pagato: {{ord.totPagato}}</p>
+                <p>Importo Intero: {{ord.importoIntero}}</p>
+                <p>Importo Bambini: {{ord.importoBambini}}</p>
+                <p>Cod Ticket: {{ord.codTicket}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

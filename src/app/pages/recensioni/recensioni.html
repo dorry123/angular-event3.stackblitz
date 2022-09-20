@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Recensioni</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="support-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+  </div> 
+
+<!-- Inserimento recensione - DA MODIFICARE-->
+   <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label position="stacked" color="primary">Inserisci nuova recensione</ion-label>
+        <ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-text color="danger">
+      <p [hidden]="supportQuestion.valid || submitted === false" class="ion-padding-start">
+        Messaggio richiesto - campo vuoto
+      </p>
+    </ion-text>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit">Submit</ion-button>
+    </div>
+  </form>
+<!-- FINE Inserimento recensione-->
+
+con modifica
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let rec of recensioni$ | async">
+        <ion-card class="event-card">
+          <ion-card-header>
+          <ion-label>Id rec</ion-label>
+          <ion-item>{{rec.id}}</ion-item>
+          <ion-label>Id Evento</ion-label>
+          <ion-item>{{rec.id_evento}}</ion-item>
+          <ion-label>Title</ion-label>
+          <ion-item>{{rec.title}}</ion-item>
+          <ion-item>{{rec.rate}}</ion-item>
+          <ion-item>{{rec.descrizione}}</ion-item>
+<!--             <ion-item detail="false" lines="none" class="event-item" routerLink="/app/tabs/events/event-detail/{{event.id}}">
+              <ion-avatar slot="start">
+                <img [src]="rec.immagine" [alt]="rec.immagine + ' profile picture'"> 
+              </ion-avatar>
+              <ion-label>
+                <h2>{{rec.idRec}}</h2>
+              </ion-label>
+            </ion-item> -->
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </ion-content> 

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let news of news$ | async">
+        <ion-card class="event-card" >
+          <ion-card-header>
+            <ion-item detail="false" lines="none" class="event-item" routerLink="/app/tabs/news/news/{{news.idMsg}}">
+              <ion-avatar slot="start">
+              </ion-avatar>
+              <ion-label>
+                <h2>{{news.tipo_news==1 ? "Promo" : news.tipo_news==2 ? "Info" :  news.tipo_news==3 ? "Alert" : "Generico"}}</h2>
+                <h2>{{news.nome_msg}}</h2>
+                <p>{{news.attivo}}</p>
+                <p>{{news.tipo_news}}</p>
+                {{news.messaggio}}
+              </ion-label>
+            </ion-item>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-list lines="none">
+              <ion-item *ngFor="let session of news.sessions" detail="false" routerLink="/app/tabs/news/session/{{session.id}}">
+                <ion-label>
+                  <h3>{{session.nomeMsg}}</h3>
+                </ion-label>
+              </ion-item>
+<!-- 
+              <ion-item detail="false" routerLink="/app/tabs/news/news/{{news.id}}">
+                <ion-label>
+                  <h3>About {{news.nomeMsg}}</h3>
+                </ion-label>
+              </ion-item> -->
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

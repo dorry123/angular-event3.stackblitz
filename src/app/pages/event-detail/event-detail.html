@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-title>Dettaglio evento</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<ion-content padding>
+  <ion-card *ngIf="(evento$ | async) as evento">
+    <ion-card-header>
+      <ion-card-title>ID {{evento.id}} -  {{evento.nome}}
+        <div>Dal {{evento.dataInizio | date:'dd/MM/yyyy' }} al {{evento.dataFine | date:'dd/MM/yyyy'}}</div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>{{evento.descrizione}}</div>
+      <div>Costo: {{evento.costo}} Euro</div>
+       <img src = "{{evento.img}}"/>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

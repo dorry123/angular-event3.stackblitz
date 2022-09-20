@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Recensioni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Recensioni</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let rec of recensioni$ | async">
+        <ion-card class="event-card">
+          <ion-card-header>
+            <ion-item detail="false" lines="none" class="event-item" routerLink="/recensioni/{{rec.id}}">
+<!--               <ion-avatar slot="start">
+                <img [src]="recens.idRec" [alt]="recens.name + ' profile picture'">
+              </ion-avatar> -->
+              <ion-label>
+                <h2>{{rec.id}}</h2>
+                <p>{{rec.rate}}</p><p>{{recens.createAt}}</p>
+                <p>{{rec.descrizine}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-list lines="none">
+              <ion-item detail="false" routerLink="/recensioni/{{rec.id}}">
+                <ion-label>
+                  <h3>About {{rec.id}}</h3>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

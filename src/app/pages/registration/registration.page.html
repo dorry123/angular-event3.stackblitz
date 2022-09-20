@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrazione</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <form>
+    <ion-item lines="full" hidden>
+      <ion-label position="floating" >Tipo utente</ion-label > 
+      <ion-input type="text" [(ngModel)]="tipoutente" [ngModelOptions]="{standalone: true}"  ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" >
+      <ion-label position="floating">Societa</ion-label>
+      <ion-input type="text" [(ngModel)]="societa" [ngModelOptions]="{standalone: true}" hiden></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Partita IVA</ion-label>
+      <ion-input type="text" [(ngModel)]="piva" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nome utente</ion-label>
+      <ion-input type="text" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Cognome</ion-label>
+      <ion-input type="text" [(ngModel)]="cognome" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" hidden>
+      <ion-label position="floating">Telefono</ion-label>
+      <ion-input type="text" [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Indirizzo</ion-label>
+      <ion-input type="text" [(ngModel)]="indirizzo" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Provincia</ion-label>
+      <ion-input type="text" [(ngModel)]="prov" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Cap</ion-label>
+      <ion-input type="text" [(ngModel)]="cap" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Localita</ion-label>
+      <ion-input type="text" [(ngModel)]="localita" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">ursername</ion-label>
+      <ion-input type="text" [(ngModel)]="username"[ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="pass"[ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="registra()" type="submit"   expand="block">Iscriviti</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
